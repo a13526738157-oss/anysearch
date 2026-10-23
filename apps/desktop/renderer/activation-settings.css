@@ -1,0 +1,13 @@
+.activation-settings { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 14px; }
+.activation-heading { display: flex; align-items: center; gap: 8px; min-height: 34px; color: var(--muted); }
+.activation-heading > svg { flex: 0 0 auto; }
+.activation-heading h2 { color: #29303a; }
+.activation-heading .icon-button { margin-left: auto; }
+.activation-option { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; padding-block: 8px; font-size: 12px; cursor: pointer; }
+.activation-option > span:first-child { min-width: 0; line-height: 1.6; overflow-wrap: anywhere; }
+.activation-option > .source-switch { flex: 0 0 auto; }
+.activation-details { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 8px 14px; margin-top: 5px; font-size: 11px; line-height: 1.6; }
+.activation-details dt { color: var(--muted); }
+.activation-details dd { min-width: 0; overflow-wrap: anywhere; }
+.activation-state { color: #5e7484; }
+.activation-state.unavailable { color: #936158; }

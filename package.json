@@ -1,0 +1,48 @@
+{
+  "name": "anysearch",
+  "version": "0.1.0-dev.0",
+  "private": true,
+  "type": "module",
+  "description": "Local reference discovery source preview. Revised draft; independent re-review pending.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "mcp": "node src/adapters/mcp/main.ts",
+    "build": "node scripts/build.ts",
+    "desktop": "node scripts/desktop.ts",
+    "native:setup": "node scripts/native-setup.ts",
+    "codex:setup": "node scripts/codex-setup.ts",
+    "semantic:setup": "node scripts/semantic-setup.ts",
+    "release:package": "node scripts/package-release.ts",
+    "release:install": "node scripts/install-release.ts",
+    "release:launch": "node scripts/launch-release.ts",
+    "release:native-setup": "node scripts/setup-release-native.ts",
+    "release:codex-setup": "node scripts/setup-release-codex.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.1",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@mozilla/readability": "0.6.0",
+    "ipaddr.js": "2.5.0",
+    "linkedom": "0.18.13",
+    "lucide-react": "1.59.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "robots-parser": "3.0.1",
+    "smol-toml": "1.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.3.5",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "electron": "44.9.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.64.1",
+    "typescript": "7.0.2"
+  }
+}

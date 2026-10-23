@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnySearch</title>
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <main>
+      <header><h1>AnySearch</h1><span class="scope">Chrome 书签</span></header>
+      <p id="status" role="status" aria-live="polite">正在读取连接状态</p>
+      <form id="pair-form" hidden>
+        <label for="code">桌面端一次性配对码</label>
+        <input id="code" name="code" type="password" maxlength="128" required autocomplete="off" spellcheck="false">
+        <section id="pair-confirmation" hidden aria-label="确认当前配置">
+          <p id="selected-profile" class="profile-name"></p>
+          <label class="confirmation-label" for="confirm-profile">
+            <input id="confirm-profile" type="checkbox">
+            <span id="confirmation-label">我确认这是当前窗口使用的配置</span>
+          </label>
+        </section>
+        <label for="label">备注名（可选）</label>
+        <input id="label" name="label" maxlength="80" autocomplete="off" placeholder="当前 Chrome 配置">
+        <p class="scope-note">范围：当前普通 Chrome 配置的全部现有与后续新增书签。无需登录 Google。</p>
+        <button id="pair-button" type="submit">核对配对</button>
+      </form>
+      <section id="paired" hidden aria-label="已配对来源">
+        <dl>
+          <div><dt>来源</dt><dd id="source-label"></dd></div>
+          <div><dt>最后成功</dt><dd id="last-sync">尚未同步</dd></div>
+        </dl>
+        <button id="refresh-button" type="button">重新同步</button>
+        <button id="resume-import-button" type="button" hidden>确认导入已结束并恢复</button>
+        <button id="reset-button" type="button" hidden>重新配对</button>
+      </section>
+      <p id="error" role="alert" hidden></p>
+      <footer>不修改原书签，不读取历史或登录态。</footer>
+    </main>
+  </body>
+</html>

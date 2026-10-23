@@ -1,0 +1,65 @@
+# Revised draft; independent re-review pending.
+# Defense in depth only: review every exported file, including tracked files.
+
+# Dependencies, generated programs, models and local application state
+node_modules/
+dist/
+.local/
+.models/
+outputs/
+coverage/
+test-results/
+playwright-report/
+chrome-profile/
+browser-profile/
+
+# Logs, caches, temporary files and diagnostic dumps
+logs/
+log/
+cache/
+.cache/
+.npm/
+*.log
+*.tsbuildinfo
+*.tmp
+*.temp
+*.download
+*.bak
+*.har
+*.dmp
+*.heapsnapshot
+
+# Environment, credentials, generated connection/setup files and key material
+.env
+.env.*
+.npmrc
+credentials.json
+connection.json
+public-text.json
+native-config.json
+registry-preview.json
+*.token
+*.secret
+*.pem
+*.key
+*.p12
+*.pfx
+*.der
+*.cer
+
+# Persistent databases and SQLite sidecars
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*-wal
+*-shm
+*-journal
+
+# Editor/OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

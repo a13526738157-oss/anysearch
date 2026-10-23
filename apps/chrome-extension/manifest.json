@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "AnySearch Bookmarks",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "incognito": "not_allowed",
+  "description": "Read-only bookmark synchronization for one paired Chrome profile.",
+  "permissions": ["bookmarks", "storage", "nativeMessaging", "alarms"],
+  "background": { "service_worker": "worker.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "AnySearch" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'"
+  }
+}
